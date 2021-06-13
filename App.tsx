@@ -36,7 +36,7 @@ const App: React.FC = () => {
       })
     }
 
-  const isNextDisabled = collection.length === activeCollection.end
+  const isNextDisabled = collection.length === activeCollection.end || collection.length <=4 || collection.length - activeCollection.start <= 4
   const isPreviousDisabled = !activeCollection.start
 
   return (
