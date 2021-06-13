@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   itemImage: {
     height: 140,
     width: 140,
-    resizeMode: 'contain',
+    resizeMode: 'cover',
     backgroundColor: colors.$azalea,
     marginBottom: 20,
     borderRadius: 4,
