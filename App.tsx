@@ -42,7 +42,18 @@ const App: React.FC = () => {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Carousel</Text>
-      <Text style={styles.subtitle}>- made using non-carousel plugins</Text>
+      <Text style={styles.subtitle}>
+        - made using map approach (no flatlist / external libraries / carousel
+        plugins)
+      </Text>
+      <Text style={styles.subtitle}>
+        - each item shows a random image from its own set with fixed ordinal
+        title
+      </Text>
+      <Text style={styles.subtitle}>
+        - data came from faker and number-to-words and generated with fs then
+        hosted locally with json-server
+      </Text>
       <View style={styles.contentContainer}>
         {!!collection.length &&
           collection
@@ -87,6 +98,8 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: 16,
     alignSelf: 'center',
+    textAlign: 'center',
+    paddingVertical: 5,
   },
   contentContainer: {
     paddingTop: 40,
