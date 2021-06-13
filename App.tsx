@@ -1,14 +1,14 @@
-import React from 'react';
-import {SafeAreaView, Text, StyleSheet} from 'react-native';
+import React from 'react'
+import { StyleSheet, SafeAreaView, Text } from 'react-native'
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Carousel</Text>
       <Text style={styles.subtitle}>- made using non-carousel plugins</Text>
     </SafeAreaView>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -22,6 +22,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     alignSelf: 'center',
   },
-});
+})
 
-export default App;
+export default App
