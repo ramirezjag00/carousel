@@ -7,7 +7,20 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
+    "prettier": "prettier --loglevel warn --write \"src/**/*.{ts,tsx,js}\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged --allow-empty"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "eslint",
+      "prettier --write",
+      "git add"
+    ]
   },
   "dependencies": {
     "react": "17.0.1",
