@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
+    "android": "react-native run-android && npm run jsonServer",
+    "ios": "react-native run-ios && npm run jsonServer",
     "start": "react-native start",
     "generateData": "node fakeGenerator.js",
     "jsonServer": "json-server --watch db.json",
